@@ -1,0 +1,36 @@
+.a {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 2px 2px;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 1s, box-shadow 1s;
+  }
+
+  .a:hover {
+    transition-delay: 0s, 1s;
+    color: #fff;
+    box-shadow: 0 0 10px #17c13b, 0 0 20px #17c13b, 0 0 40px #17c13b, 0 0 80px #17c13b,
+      0 0 160px #17c13b;
+  }
+
+  .a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background: #17c13b;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: 1s;
+  }
+
+  .a:hover:before {
+    width: 100%;
+  }
